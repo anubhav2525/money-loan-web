@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ThemeOption from "@/components/secured/ThemeOption/ThemeOption";
+import { div } from "framer-motion/client";
 
 export const MenuIcon = ({ classname }: any) => {
   return (
@@ -64,13 +65,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+      className={`fixed top-0 rounded-b-lg left-0 w-full z-50 transition-colors duration-300 ${
         navBackground
           ? "bg-white dark:bg-black dark:text-white text-black shadow-md"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-base py-2">
+      <nav className=" px-4 sm:px-6 lg:px-8 flex items-center justify-between text-base py-2">
         <div className="flex items-center">
           <Link
             href="/"
@@ -138,11 +139,11 @@ const Navbar = () => {
             )}
           </button>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden dark:border dark:border-slate-900 mx-4 dark:bg-slate-950">
+        <nav className="md:hidden dark:border dark:border-slate-900 mx-4 dark:bg-slate-950">
           <div className="px-2 w-full flex flex-col pt-2 pb-3 text-xs space-y-1 sm:px-3">
             <NavLink
               title="Home"
@@ -192,7 +193,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </nav>
       )}
     </nav>
   );

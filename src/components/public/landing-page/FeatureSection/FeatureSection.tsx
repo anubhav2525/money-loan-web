@@ -60,9 +60,14 @@ const FeatureSection = () => {
       icon: <IconHeart />,
     },
   ];
+
   return (
-    <div className="w-full h-full py-4 md:py-10 bg-white dark:bg-black px-4 md:px-0">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">
+    <div className="w-full h-full min-h-screen md:min-h-[90vh] py-10 md:py-20 bg-white dark:bg-black px-4 md:px-0">
+      <h2 className="max-w-7xl mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Get to know your iSad.
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 md:pb-0 max-w-7xl mx-auto">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />
         ))}

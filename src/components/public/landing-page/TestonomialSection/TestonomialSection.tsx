@@ -1,8 +1,6 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import Motivational from "../Motivational/Motivational";
 
 const TestonomialSection = () => {
   const testimonials = [
@@ -38,13 +36,22 @@ const TestonomialSection = () => {
   ];
 
   return (
-    <div className="h-[40rem] md:h-auto md:py-10 flex flex-col antialiased bg-white dark:bg-black items-center justify-center relative overflow-hidden">
-      <Motivational />
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
+    <div className="min-h-[95vh] w-full py-10 md:py-20 antialiased bg-white dark:bg-black relative overflow-hidden">
+      <h2 className="max-w-7xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Get to know your iSad.
+      </h2>
+      <div className="py-10 max-w-7xl mx-auto">
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="left"
+          speed="slow"
+        />
+      </div>
     </div>
   );
 };
