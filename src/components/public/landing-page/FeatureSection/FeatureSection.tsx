@@ -62,7 +62,7 @@ const FeatureSection = () => {
   ];
 
   return (
-    <div className="w-full h-full min-h-screen md:min-h-[90vh] py-10 md:py-20 bg-white dark:bg-black px-4 md:px-0">
+    <div className="w-full h-full min-h-screen md:min-h-[90vh] py-10 md:py-20 bg-white dark:bg-black px-4">
       <h2 className="max-w-7xl mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Get to know your iSad.
       </h2>

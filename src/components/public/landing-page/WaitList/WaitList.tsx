@@ -3,7 +3,7 @@ import React from "react";
 
 const WaitList = () => {
   return (
-    <div className="py-10 md:py-20 h-[50vh] px-4 md:px-0 flex flex-col antialiased items-center justify-center relative overflow-hidden dark:bg-black bg-white">
+    <div className="py-10 md:py-20 h-[50vh] px-4 flex flex-col antialiased items-center justify-center relative overflow-hidden dark:bg-black bg-white">
       <h1 className="mt-2 px-4 md:mt-0 text-3xl md:text-4xl mb-6 font-bold text-black/70 dark:text-white/75">
         Join Us
       </h1>
@@ -18,11 +18,11 @@ const WaitList = () => {
           <input
             type="text"
             placeholder="email@xyz.com"
-            className="rounded-lg border p-2 px-4 dark:text-white border-neutral-800/10 focus:ring-2 focus:ring-teal-500  w-full  dark:bg-neutral-950 bg-slate-200 placeholder:text-neutral-700 dark:placeholder:text-slate-600"
+            className="rounded-md border p-2 px-4 dark:text-white border-neutral-800/10 focus:ring-2 focus:ring-teal-500  w-full dark:bg-neutral-900 bg-slate-50 placeholder:text-neutral-700 dark:placeholder:text-slate-600"
           />
           <button
             type="submit"
-            className="rounded-lg border py-2.5 px-4 dark:text-white/50 md:dark:text-white/90 border-neutral-800/10 dark:bg-neutral-950 bg-slate-200 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
+            className="rounded-md border py-2.5 px-4 dark:text-white/50 md:dark:text-white/90 border-neutral-800/10 dark:bg-neutral-900 dark:hover:bg-black bg-slate-50 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
           >
             <svg
               className="w-5 h-5 "

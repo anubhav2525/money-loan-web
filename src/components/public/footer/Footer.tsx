@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-white dark:bg-black text-gray-600 dark:text-gray-400 py-6 ">
-      <div className="max-w-6xl md:pl-8 pl-4 mx-auto pb-7 font-bold text-xl">
+    <div className="bg-slate-50 dark:bg-black text-gray-600 dark:text-gray-400 py-10 md:py-20">
+      <div className="max-w-5xl mx-auto font-bold text-xl pb-10 px-4">
         <h2 className="text-gray-900 dark:text-white text-lg font-semibold ">
           Lorem, ipsum.
         </h2>
       </div>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 px-4 sm:px-6 text-xs  lg:px-8">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 px-4 text-xs">
         <div>
           <h2 className="text-gray-900 dark:text-white text-lg font-semibold mb-4">
             About Us

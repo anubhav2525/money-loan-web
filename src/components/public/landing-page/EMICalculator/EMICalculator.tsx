@@ -46,12 +46,12 @@ const EMICalculator = () => {
   const ClearCalculation = () => {
     return (
       <button
-        className="shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] p-2 dark:bg-white/80 bg-black/80 text-white dark:text-black dark:hover:bg-white/50 hover:bg-black/60 rounded-md transition duration-200 ease-linear"
+        className="dark:text-white text-black transition duration-200 ease-linear hover:text-red-500 dark:hover:text-red-600"
         type="button"
         onClick={() => setEmi("")}
       >
         <svg
-          className="w-6 h-6"
+          className="md:w-6 md:h-6 h-5 w-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -61,7 +61,7 @@ const EMICalculator = () => {
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="1.5"
+            strokeWidth="2"
             d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
           />
         </svg>
@@ -70,15 +70,15 @@ const EMICalculator = () => {
   };
 
   return (
-    <div className="w-full h-auto py-10 md:py-20 bg-slate-50 dark:bg-black">
-      <div className="px-4 md:px-0 antialiased relative overflow-hidden">
+    <div className="w-full px-4 h-auto py-10 md:py-20 bg-slate-50 dark:bg-black">
+      <div className="antialiased relative overflow-hidden">
         <h2 className="max-w-7xl pb-10 mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
           Get to know your iSad.
         </h2>
-        <div className="w-full max-w-7xl mx-auto gap-y-4 md:gap-y-0 md:gap-x-4 grid grid-cols-1 md:grid-cols-2 p-2">
+        <div className="w-full max-w-7xl mx-auto gap-y-4 md:gap-y-0 md:gap-x-4 grid grid-cols-1 md:grid-cols-2 py-2">
           <form
             onSubmit={handleSubmit}
-            className="border dark:border-slate-900 dark:shadow-md dark:border-2 p-4 py-6 shadow-md rounded-lg"
+            className="border border-slate-200 dark:border-slate-900 dark:shadow-md dark:border-2 p-4 py-6 shadow-md rounded-lg"
           >
             {/* Loan Amount Input */}
             <LabelInputContainer className="mb-4">
@@ -128,7 +128,7 @@ const EMICalculator = () => {
 
           {/* EMI Calculation Result */}
           {emi && (
-            <div className="border dark:border-slate-900 dark:shadow-md dark:border-2 p-4 py-6 shadow-md rounded-lg text-black/90 dark:text-white/80">
+            <div className="border border-slate-200 dark:border-slate-900 dark:shadow-md dark:border-2 p-4 py-6 shadow-md rounded-lg text-black/90 dark:text-white/80">
               <h2 className="text-2xl font-bold dark:text-white/80 text-center pb-4">
                 EMI Calculation
               </h2>
@@ -148,11 +148,11 @@ const EMICalculator = () => {
                 <span className="font-medium">Total Payment:</span>
                 <span>₹{totalPayment}</span>
               </div>
-              <div className="flex justify-between mb-2 border-t pt-2">
+              <div className="flex justify-between border-t pt-2">
                 <span className="font-medium">EMI:</span>
                 <div className="flex justify-center items-center gap-x-2">
-                  <span className="p-2 dark:bg-white/80 bg-black/80 text-white dark:text-black rounded-md">
-                    ₹{emi} per month
+                  <span className="text-black dark:text-white rounded-md">
+                    ₹ {emi}/month
                   </span>
                   <ClearCalculation />
                 </div>

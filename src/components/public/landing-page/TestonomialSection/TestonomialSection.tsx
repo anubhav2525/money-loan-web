@@ -36,7 +36,7 @@ const TestonomialSection = () => {
   ];
 
   return (
-    <div className="min-h-[95vh] w-full py-10 md:py-20 antialiased bg-white dark:bg-black relative overflow-hidden">
+    <div className="min-h-[95vh] w-full px-4 py-10 md:py-20 antialiased bg-white dark:bg-black relative overflow-hidden">
       <h2 className="max-w-7xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Get to know your iSad.
       </h2>

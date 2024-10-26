@@ -5,7 +5,7 @@ import { CardType } from "../List/List";
 
 const FrequentlyAskedQuestion = () => {
   return (
-    <div className="py-10 md:py-20 px-4 md:px-0 h-full w-full antialiased relative overflow-hidden bg-slate-50 dark:bg-black">
+    <div className="py-10 md:py-20 px-4 h-full w-full antialiased relative overflow-hidden bg-slate-50 dark:bg-black">
       <h2 className="max-w-7xl mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans pb-6">
         Frequently Asked Questions ?
       </h2>

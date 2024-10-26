@@ -21,7 +21,7 @@ const DashboardPage = () => {
   const role = "USER";
 
   return (
-    <div className="min-w-full p-4 md:p-6 min-h-full flex flex-col justify-center items-center">
+    <div className="min-w-full p-4 md:p-6 dark:bg-black min-h-full flex flex-col justify-center items-center">
       <div className="w-full pb-2">
         <h1 className="text-xl text-black dark:text-slate-300 md:text-2xl lg:text-3xl font-bold">
           <div className="flex justify-between items-center">

@@ -43,7 +43,7 @@ const HeroSection = () => {
         The road to freedom starts from here
       </p>
       <TypewriterEffectSmooth words={words} />
-      <div className="mt-4">
+      <div className="">
         <CallToAction />
       </div>
     </section>
@@ -54,7 +54,7 @@ export default HeroSection;
 
 const CallToAction = () => {
   return (
-    <div className="flex flex-col md:gap-x-4 md:flex-row space-y-4 md:space-y-0 space-x-0 ">
+    <div className="w-full h-full flex flex-col gap-4 md:flex-row ">
       <Modal>
         <ModalTrigger className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
@@ -63,8 +63,8 @@ const CallToAction = () => {
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
-            <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Check your eligibility to Approve your{" "}
+            <h4 className="text-lg w-full flex-col md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
+              <div>Check your eligibility to Approve your </div>
               <div className="px-3 py-0.5 inline-block mt-3 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
                 Loan Faster
               </div>

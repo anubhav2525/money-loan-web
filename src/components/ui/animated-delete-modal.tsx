@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-
 import React, {
   ReactNode,
   createContext,
@@ -18,7 +17,7 @@ interface ModalContextType {
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
-export const ModalProvider = ({ children }: { children: ReactNode }) => {
+export const DeleteModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,26 +27,26 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useModal = () => {
+export const useDeleteModal = () => {
   const context = useContext(ModalContext);
   if (!context) {
-    throw new Error("useModal must be used within a ModalProvider");
+    throw new Error("useDeleteModal must be used within a ModalProvider");
   }
   return context;
 };
 
-export function Modal({ children }: { children: ReactNode }) {
-  return <ModalProvider>{children}</ModalProvider>;
+export function DeleteModal({ children }: { children: ReactNode }) {
+  return <DeleteModalProvider>{children}</DeleteModalProvider>;
 }
 
-export const ModalTrigger = ({
+export const DeleteModalTrigger = ({
   children,
   className,
 }: {
   children: ReactNode;
   className?: string;
 }) => {
-  const { setOpen } = useModal();
+  const { setOpen } = useDeleteModal();
   return (
     <button
       className={cn(
@@ -61,14 +60,14 @@ export const ModalTrigger = ({
   );
 };
 
-export const ModalBody = ({
+export const DeleteModalBody = ({
   children,
   className,
 }: {
   children: ReactNode;
   className?: string;
 }) => {
-  const { open } = useModal();
+  const { open } = useDeleteModal();
 
   useEffect(() => {
     if (open) {
@@ -79,7 +78,7 @@ export const ModalBody = ({
   }, [open]);
 
   const modalRef = useRef(null);
-  const { setOpen } = useModal();
+  const { setOpen } = useDeleteModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
   return (
@@ -104,7 +103,7 @@ export const ModalBody = ({
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] lg:max-w-[60%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 lg:rounded-xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "lg:max-w-[50%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 lg:rounded-xl relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
             initial={{
@@ -139,7 +138,7 @@ export const ModalBody = ({
   );
 };
 
-export const ModalContent = ({
+export const DeleteModalContent = ({
   children,
   className,
 }: {
@@ -153,7 +152,7 @@ export const ModalContent = ({
   );
 };
 
-export const ModalFooter = ({
+export const DeleteModalFooter = ({
   children,
   className,
 }: {
@@ -192,14 +191,14 @@ const Overlay = ({ className }: { className?: string }) => {
 };
 
 const CloseIcon = () => {
-  const { setOpen } = useModal();
+  const { setOpen } = useDeleteModal();
   return (
     <button
       onClick={() => setOpen(false)}
       className="absolute top-4 right-4 group"
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"     
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
