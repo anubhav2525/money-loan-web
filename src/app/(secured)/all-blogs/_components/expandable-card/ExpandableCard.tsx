@@ -103,7 +103,7 @@ const ExpandableCard = ({ data }: any) => {
                   </div>
                   <div className="flex gap-x-4">
                     <Link
-                      href={`/all-faqs/edit/${id}`}
+                      href={active.editLink}
                       className="px-4 py-3 text-sm rounded-xl font-bold bg-green-500 text-white hover:opacity-90"
                     >
                       <EditBtn />
@@ -224,7 +224,6 @@ const ViewBtn = () => {
     </svg>
   );
 };
-
 const DeleteBtn = () => {
   return (
     <svg

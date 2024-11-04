@@ -13,13 +13,19 @@ const nextConfig = {
         hostname: "images.unsplash.com",
         port: "", // Leave empty for default port
         pathname: "/**", // Allow all image paths from Unsplash
-      },     
+      },
       {
         protocol: "https",
         hostname: "assets.aceternity.com",
         port: "", // Leave empty for default port
         pathname: "/**", // Allow all image paths from Unsplash
-      },     
+      },
+      {
+        protocol: "https",
+        hostname: "flowbite.s3.amazonaws.com",
+        port: "", // Leave empty for default port
+        pathname: "/**", // Allow all image paths from Unsplash
+      },
     ],
   },
 };

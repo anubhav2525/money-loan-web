@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -193,6 +194,7 @@ const SignUp = () => {
         </span>
         <BottomGradient />
       </button>
+
       <p className="text-sm pt-4 font-light text-center text-gray-500 dark:text-gray-400">
         Already have an account?{" "}
         <Link

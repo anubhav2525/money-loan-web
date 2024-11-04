@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -108,7 +109,7 @@ const SignIn = () => {
               <Label htmlFor="password">Password</Label>
               <Link
                 href={"/forget-password"}
-                className="font-medium text-xs text-primary-600  dark:text-blue-500 text-blue-600 hover:text-blue-800 dark:hover:text-blue-700"
+                className="font-medium text-xs dark:text-blue-500 text-blue-600 hover:text-blue-800 dark:hover:text-blue-700"
               >
                 Forget Password?
               </Link>
@@ -170,7 +171,7 @@ const SignIn = () => {
         Don't have an account yet?{" "}
         <Link
           href={"/sign-up"}
-          className="font-medium text-primary-600  dark:text-blue-500 text-blue-600 hover:text-blue-800 dark:hover:text-blue-700"
+          className="font-medium dark:text-blue-500 text-blue-600 hover:text-blue-800 dark:hover:text-blue-700"
         >
           Sign up
         </Link>

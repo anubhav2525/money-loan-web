@@ -18,7 +18,7 @@ const ContactPage = () => {
     useState<string>(""); // Description for alert
 
   return (
-    <main className="min-h-screen bg-slate-100/[0.96] dark:bg-black/[0.90] antialiased">
+    <main className="min-h-screen bg-slate-100/[0.96] dark:bg-black/[0.90] w-full antialiased">
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="blue" />
       <div className="pt-24 px-4 w-full md:w-[90%] mx-auto flex flex-col antialiased items-center justify-center relative overflow-hidden">
         <h1 className="mt-2 px-4 md:mt-0 text-3xl md:text-4xl mb-6  font-bold text-black/70 dark:text-white/75">

@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import HeroSection from "@/components/public/landing-page/HeroSection/HeroSection";
 import HeroParallaxSection from "@/components/public/landing-page/HeroParallaxSection/HeroParallaxSection";

@@ -57,14 +57,25 @@ const adminGroupLinks = [
     title: "CONTENT",
     items: [
       {
-        label: "FAQs",
+        label: "FAQS",
         href: "",
         icon: <IconPencil className="h-5 w-5 flex-shrink-0" />,
         subroutes: [
           { label: "All FAQs", href: "/all-faqs" },
-          { label: "Add Blog", href: "/add" },
-          { label: "Categories", href: "/categories" },
-          { label: "Blog Comments", href: "/blog-comment" },
+          { label: "Add new", href: "/all-faqs/add" },
+          { label: "Search", href: "/all-faqs/search" },
+          // { label: "Edit ", href: "/all-faqs/edit" },
+        ],
+      },
+      {
+        label: "BLOG & ARTICLE",
+        href: "",
+        icon: <IconPencil className="h-5 w-5 flex-shrink-0" />,
+        subroutes: [
+          { label: "All Blogs", href: "/all-blogs" },
+          { label: "Add new", href: "/all-blogs/add" },
+          { label: "Search", href: "/all-blogs/search" },
+          // { label: "Edit Blog", href: "/all-blogs/edit" },
         ],
       },
     ],

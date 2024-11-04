@@ -161,6 +161,7 @@ export const FormText = ({
     </div>
   );
 };
+
 const ErrorMessage = ({ message }: { message?: string }) => {
   return message ? (
     <p className="text-red-500 text-xs pt-2">{message}</p>
